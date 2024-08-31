@@ -22,8 +22,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(checkForAuthentication);
 
-console.log('process.env.MONGODB', process.env.MONGODB)
-connectToMongoDB(process.env.MONGODB ?? "mongodb://localhost:27017/short-url")
+connectToMongoDB('mongodb+srv://skc18313963:NJxdOSEBGhkyUMxB@cluster0.zmgto.mongodb.net/')
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.error(err));
 
